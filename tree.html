@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src='state.js'></script>
+	<script src='dicionary.js'></script>
+	<!--<script src='dicionary_pt.js'></script>-->
+	<script src='alphabet.js'></script>
+	<script src='solver.js'></script>
+	<script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+
+	<style>
+		td
+		{
+			width: 50px;
+			height: 50px;
+			font-size: 40px;
+			text-align: center;
+		}
+
+		.black
+		{
+			background-color: #000000;
+		}
+
+	</style>
+
+	<script>
+		function set(td)
+		{
+			if($(td).hasClass('black'))
+			{
+				$(td).removeClass('black').attr('black',0).html('');
+			}
+			else
+			{
+				$(td).addClass('black').attr('black',1).html('#');
+			}
+		}
+	</script>
+</head>
+<body>
+<div id='div_table' style='float:left'>
+<table border=1 id="table">
+	<tr>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+	</tr>
+	<tr>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+	</tr>
+	<tr>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+	</tr>
+	<tr>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+	</tr>
+	<tr>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+		<td onclick="set(this);" black></td>
+	</tr>
+</table><br>
+<button onclick="doit()">Solve</button>&nbsp;
+<button onclick="location.href = 'tree.html'">Refresh</button><br>
+</div>
+<div id='div_timer' style='padding-left:20px;float:left;padding-top:100px;'>
+	<label id='timer' style="font-size:50px;font-family: fantasy;">0:00</label>
+</div>
+
+
+</body>
+</html>
